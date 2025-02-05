@@ -634,6 +634,7 @@ static void EditAssetField(Asset asset, int fieldIndex)
     if (input == null || input.Trim() == "")
         return;
 
+    Console.SetCursorPosition(0, Console.CursorTop + 5 - fieldIndex);
     bool valid = true;
     switch (fieldIndex)
     {
@@ -697,7 +698,7 @@ static void EditAssetField(Asset asset, int fieldIndex)
 
         context.SaveChanges();
 
-        Console.SetCursorPosition(0, Console.CursorTop + 5 - fieldIndex);
+        
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"{fieldName} updated successfully! Press any key to continue...");
         Console.ResetColor();
@@ -998,8 +999,8 @@ static void PrintMainMenu()
     Console.WriteLine("Welcome to Your Asset Tracker\n");
     Console.ResetColor();
     Console.WriteLine("[1] Add an Asset to an Office");
-    Console.WriteLine("[2] View/Manage Assets per Office (CRUD)");
-    Console.WriteLine("[3] View/Manage All Assets (CRUD)");
+    Console.WriteLine("[2] View/Manage Assets per Office");
+    Console.WriteLine("[3] View/Manage All Assets");
     Console.ForegroundColor = ConsoleColor.DarkGray;
     Console.WriteLine("\n[ESC] quit.");
     Console.ResetColor();

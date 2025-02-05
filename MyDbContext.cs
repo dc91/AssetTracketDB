@@ -12,9 +12,9 @@ namespace AssetTracketDB
     {
         string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AssetTracker;Integrated Security=True";
 
+        public DbSet<Office> Offices { get; set; }
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<Mobile> Mobiles { get; set; }
-        public DbSet<Office> Offices { get; set; }
         public DbSet<Currencies> Currencies { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

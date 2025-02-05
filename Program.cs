@@ -1,7 +1,7 @@
 ﻿using AssetTracketDB;
 using Microsoft.EntityFrameworkCore;
 
-//LoadQuotes();
+LoadQuotes();
 static List<Office> LoadOffices()
 {
     using var context = new MyDbContext();
